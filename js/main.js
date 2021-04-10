@@ -59,7 +59,7 @@ function mark(id, color) {
     // $("#e" + id).css("background-color", "#dc3545");
     // count++;
     markCount++
-    // console.log(count);
+
     $("#e" + id).css("background-color", color);
     $("#e" + id).css("border", "2px solid " + color);
     $("#e" + id).css("color", "white");
@@ -85,7 +85,6 @@ function markPrime(id) {
     }
     primeNumbers += primeArray[primeArray.length - 1] + "</span>";
     $("#primeNum").html(primeNumbers);
-    console.log(markCount + " -" + count)
     if (markCount == count) {
         $(':input[type="submit"]').prop('disabled', false);
         $("#btnStart").html("Pokreni");

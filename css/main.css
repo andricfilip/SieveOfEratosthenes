@@ -13,12 +13,13 @@ i {
     font-weight: bold;
 }
 
-.extraLarge {
-    width: 1.5%;
-    height: 20px;
-    padding: 10px;
-    background-color: blue;
-    float: left;
+.hiddenBox {
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-align: center;
+    margin: auto;
+    font-size: 1.5vw;
+    font-weight: bold;
 }
 
 #primeNum {
