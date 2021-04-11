@@ -51,13 +51,71 @@
         </div>
     </div>
 
-</body>
+    <footer>
+        <div class="copyright sticky-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <span>
+                             <a href="https://sr.wikipedia.org/sr-ec/%D0%95%D1%80%D0%B0%D1%82%D0%BE%D1%81%D1%82%D0%B5%D0%BD%D0%BE%D0%B2%D0%BE_%D1%81%D0%B8%D1%82%D0%BE"><img src="images/wiki.png" width="4%"> Wikipedia</a>
+                        </span>
+                    </div>
+                </div>
+                <!-- End Row -->
+            </div>
+            <!-- End Copyright Container -->
+        </div>
+        <!-- End Copyright -->
+        <!-- Back to top -->
 
-</html>
+        <!-- End Back to top -->
+    </footer>
+
+    <div class="modal fade" id="resultModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Rezultat za brojeve do <span id="modalNum"></span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Zatvori</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-<script src="js/jquery-3.6.0.min.js "></script>
-<script src='js/main.js'></script>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Upozorenje!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                </div>
+                <div class="modal-body">
+                    <p>Unesite broj elemenata, ukoliko niste.</p>
+                    <p>Broj elemenata mora biti u opsegu od 100 do 2000.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Zatvori</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src='js/main.js'></script>
 </body>
 
 </html>

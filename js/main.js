@@ -8,10 +8,13 @@ $(document).ready(function() {
         e.preventDefault();
         n = $("#numOfElements").val();
         if (n < 100 || n == undefined || n > 2000) { // ograniciti gornju granicu
-            alert("Unesite broj elemenata, ukoliko niste. \nBroj elemenata mora biti u opsegu od 100 do 2000.");
+            // alert("Unesite broj elemenata, ukoliko niste. \nBroj elemenata mora biti u opsegu od 100 do 2000.");
+            $('#warningModal').modal('show');
             $("#numOfElements").val(100);
             return;
         }
+        $('#numOfElements').prop('disabled', true);
+        $('#speed').prop('disabled', true);
         $("#btnStart").html("Simulacija u toku ...");
         $(':input[type="submit"]').prop('disabled', true);
         $("#btnStart").removeClass("btn-primary");
@@ -86,10 +89,8 @@ function markPrime(id) {
     primeNumbers += primeArray[primeArray.length - 1] + "</span>";
     $("#primeNum").html(primeNumbers);
     if (markCount == count) {
-        $(':input[type="submit"]').prop('disabled', false);
-        $("#btnStart").html("Pokreni");
-        $("#btnStart").removeClass("btn-warning");
-        $("#btnStart").addClass("btn-primary");
+        n = $("#numOfElements").val();
+        setTimeout(showModal, 300, n, primeNumbers);
     }
     updateProgressBar(markCount / count * 100);
 
@@ -150,9 +151,21 @@ function eratosten(n, speed) {
 
 
 
+}
+
+function showModal(numOfElements, primeRes) {
+
+    //enable form
+    $(':input[type="submit"]').prop('disabled', false);
+    $("#btnStart").html("Pokreni");
+    $("#btnStart").removeClass("btn-warning");
+    $("#btnStart").addClass("btn-primary");
+    $('#numOfElements').prop('disabled', false);
+    $('#speed').prop('disabled', false);
+    //--------------------------------
 
 
-    // ----------------------------------------
-
-
+    $("#modalNum").html(numOfElements);
+    $(".modal-body").html(primeRes);
+    $('#resultModal').modal('show');
 }

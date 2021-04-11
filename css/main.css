@@ -39,3 +39,21 @@ i {
     font-size: 1.2vw;
     font-weight: bold;
 }
+
+.copyright {
+    padding: 28px 0;
+    margin-top: auto;
+    background-color: transparent;
+}
+
+.copyright span,
+.copyright a {
+    color: #878787;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.copyright a:hover {
+    color: #007bff;
+}
