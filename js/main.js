@@ -166,6 +166,6 @@ function showModal(numOfElements, primeRes) {
 
 
     $("#modalNum").html(numOfElements);
-    $(".modal-body").html(primeRes);
+    $(".resModal").html(primeRes);
     $('#resultModal').modal('show');
 }
